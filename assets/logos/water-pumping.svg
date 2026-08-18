@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 54" fill="none" role="img" aria-labelledby="wplTitle">
+  <title id="wplTitle">تصاريح ضخ المياه</title>
+  <text x="128" y="14" text-anchor="end" fill="#FFFFFF" font-family="Reem Kufi, Tahoma, sans-serif" font-size="13" font-weight="700">تصاريح</text>
+  <text x="128" y="30" text-anchor="end" fill="#FFFFFF" font-family="Reem Kufi, Tahoma, sans-serif" font-size="13" font-weight="700">ضخ</text>
+  <text x="128" y="46" text-anchor="end" fill="#FFFFFF" font-family="Reem Kufi, Tahoma, sans-serif" font-size="13" font-weight="700">المياه</text>
+  <line x1="72" y1="6" x2="72" y2="48" stroke="#FFFFFF" stroke-width="1.4"/>
+  <g transform="translate(42,5)" fill="#FFFFFF">
+    <path d="M14 0L16.5 7.2H24L18 11.6L20.4 18.8L14 14.4L7.6 18.8L10 11.6L4 7.2H11.5L14 0Z"/>
+    <rect x="12.4" y="16.5" width="3.2" height="16.5" rx="0.4"/>
+    <path d="M6.5 40H21.5L14 34.2L6.5 40Z"/>
+  </g>
+</svg>

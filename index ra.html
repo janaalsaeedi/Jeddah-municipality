@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>طلب ضخ مياه جديد</title>
+<!-- خط عربي -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=Reem+Kufi:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Bootstrap -->
+<link href="vendor/bootstrap/css/bootstrap.rtl.min.css" rel="stylesheet"/>
+<!-- Hugeicons -->
+<link href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" rel="stylesheet"/>
+<!-- ملف التنسيق -->
+<link href="css/style.css" rel="stylesheet"/>
+<link href="vendor/flatpickr/flatpickr.min.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- الشريط الحكومي -->
+<div class="gov-bar" id="govBar">
+<div class="gov-bar__inner">
+<div class="gov-bar__title">
+<img src="assets/logos/Flag_of_Saudi.webp"
+     alt="علم المملكة العربية السعودية"
+     class="saudi-flag">
+<span>موقع حكومي مسجل لدى هيئة الحكومة الرقمية</span>
+</div>
+<button aria-controls="govBarDetails" aria-expanded="false" class="gov-bar__check" id="govBarCheck" type="button">
+<span>كيف تتحقق</span>
+<svg aria-hidden="true" class="gov-bar__arrow" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="m6 9 6 6 6-6"></path>
+</svg>
+</button>
+</div>
+<div class="gov-bar__details" hidden="" id="govBarDetails">
+<div class="gov-bar__detail-grid">
+<div class="gov-bar__detail-item">
+<div aria-hidden="true" class="gov-bar__detail-icon">↗</div>
+<div>
+<h3>روابط المواقع الإلكترونية الرسمية الحكومية تنتهي بـ <strong>gov.sa</strong></h3>
+<p>جميع روابط المواقع الرسمية التابعة للجهات الحكومية في المملكة العربية السعودية تنتهي بـ gov.sa.</p>
+</div>
+</div>
+<div class="gov-bar__detail-item">
+<div aria-hidden="true" class="gov-bar__detail-icon">⌕</div>
+<div>
+<h3>المواقع الإلكترونية الحكومية الموثوقة تستخدم بروتوكول <strong>HTTPS</strong></h3>
+<p>تحقق من أن الموقع يستخدم بروتوكول HTTPS لضمان الاتصال الآمن.</p>
+</div>
+</div>
+</div>
+<div class="gov-bar__registration">
+<span>مسجل لدى هيئة الحكومة الرقمية برقم:</span>
+<a href="#">20230103200</a>
+</div>
+</div>
+</div>
+<!-- القائمة العلوية -->
+<header class="site-header" id="siteHeader">
+<div class="site-header__inner">
+<a aria-label="أمانة محافظة جدة — الرئيسية" class="site-logo" href="#section-basic">
+<img alt="شعار أمانة محافظة جدة" class="site-logo__img" height="78" src="assets/logos/amanah.svg" width="140"/>
+</a>
+<nav aria-label="القائمة الرئيسية" class="site-nav" id="siteNav">
+<ul class="site-nav__list">
+<li class="site-nav__item">
+<a href="#section-basic">
+<span>الرئيسية</span>
+</a>
+</li>
+<li class="site-nav__item">
+<a href="javascript:void(0)">
+<span>عن الخدمة</span>
+<svg aria-hidden="true" class="site-nav__caret" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg>
+</a>
+</li>
+<li class="site-nav__item">
+<a href="javascript:void(0)">
+<span>الأعمال والمشاريع</span>
+<svg aria-hidden="true" class="site-nav__caret" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg>
+</a>
+</li>
+<li class="site-nav__item site-nav__item--has-menu">
+<button aria-controls="servicesSubmenu" aria-expanded="false" aria-haspopup="true" class="site-nav__trigger" type="button">
+<span>الخدمات</span>
+<svg aria-hidden="true" class="site-nav__caret" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+<ul class="site-nav__submenu" id="servicesSubmenu">
+<li>
+<a class="is-active" href="#section-basic">تصاريح الضخ</a>
+</li>
+</ul>
+</li>
+<li class="site-nav__item">
+<a href="javascript:void(0)">
+<span>المركز الإعلامي</span>
+<svg aria-hidden="true" class="site-nav__caret" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg>
+</a>
+</li>
+<li class="site-nav__item">
+<a href="javascript:void(0)">
+<span>الإبداع والابتكار</span>
+</a>
+</li>
+</ul>
+</nav>
+<div class="site-header__actions">
+<button aria-label="بحث" class="site-icon-btn" type="button">
+<svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="20"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+</button>
+<button aria-label="اللغة" class="site-icon-btn" type="button">
+<svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="20">
+<path d="M4 5h8"></path>
+<path d="M8 3v2"></path>
+<path d="M6 5c1 4 3 6 6 7"></path>
+<path d="M5 12c2-1 4-3 5-6"></path>
+<rect height="8" rx="1.2" width="7" x="13.5" y="11.5"></rect>
+<path d="M15 14h4"></path>
+<path d="M15.5 16h3"></path>
+</svg>
+</button>
+<a class="site-login" href="javascript:void(0)">
+<svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="18"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 19c1.5-3 4-4.5 7-4.5s5.5 1.5 7 4.5"></path></svg>
+<span class="site-login__label">تسجيل الدخول</span>
+</a>
+<button aria-controls="siteNav" aria-expanded="false" aria-label="فتح القائمة" class="site-burger" id="navToggleBtn" type="button">
+<span></span><span></span><span></span>
+</button>
+</div>
+</div>
+</header>
+<main class="app-main">
+<div class="breadcrumb-bar">
+<nav aria-label="مسار التصفح">
+<ol class="breadcrumb">
+<li class="breadcrumb-item">
+<a href="#section-basic">الرئيسية</a>
+</li>
+<li class="breadcrumb-item">
+<a href="javascript:void(0)" id="breadcrumbServices">الخدمات الإلكترونية</a>
+</li>
+<li aria-current="page" class="breadcrumb-item active">تصاريح ضخ المياه</li>
+</ol>
+</nav>
+</div>
+<div class="form-card">
+<!-- العنوان -->
+<h2 class="page-title" id="section-basic">
+                طلب ضخ مياه جديد
+            </h2>
+<!-- الوصف -->
+<p class="page-description">
+                يهدف هذا النموذج إلى تسجيل مناطق ومواقع مشاريع ضخ المياه، وبيانات المشروع، والمضخات، مع إرفاق المستندات اللازمة لإكمال الطلب.
+            </p>
+<!-- رسالة النتيجة -->
+<div class="form-message" id="formMessage" role="alert"></div>
+<!-- بداية النموذج -->
+<form id="pumpingForm" novalidate="">
+<!-- الصف الأول -->
+<div class="row g-3 mb-4">
+<!-- اسم المشروع -->
+<div class="col-6">
+<label class="form-label" for="projectName">
+                            اسم المشروع <span class="text-danger">*</span>
+</label>
+<div class="field-wrap">
+<input class="form-control" id="projectName" name="projectName" required="" type="text"/>
+</div>
+<div class="field-error" data-error-for="projectName">هذا الحقل مطلوب</div>
+</div>
+<!-- حالة المشروع -->
+<div class="col-6">
+<label class="form-label" for="projectStatus">
+                            حالة المشروع <span class="text-danger">*</span>
+</label>
+<div class="field-wrap">
+<input class="form-control" id="projectStatus" name="projectStatus" required="" type="text"/>
+</div>
+<div class="field-error" data-error-for="projectStatus">هذا الحقل مطلوب</div>
+</div>
+</div>
+<!-- الصف الثاني -->
+<div class="row g-3 mb-4">
+<!-- رقم هوية المالك -->
+<div class="col-6">
+<label class="form-label" for="ownerId">
+                            رقم هوية المالك <span class="text-danger">*</span>
+</label>
+<div class="field-wrap">
+<input class="form-control" id="ownerId" name="ownerId" required="" type="text"/>
+</div>
+<div class="field-error" data-error-for="ownerId">هذا الحقل مطلوب</div>
+</div>
+<!-- رقم رخصة البناء -->
+<div class="col-6">
+<label class="form-label" for="buildingPermit">
+                            رقم رخصة البناء <span class="text-danger">*</span>
+</label>
+<div class="field-wrap">
+<input class="form-control" id="buildingPermit" name="buildingPermit" required="" type="text"/>
+</div>
+<div class="field-error" data-error-for="buildingPermit">هذا الحقل مطلوب</div>
+</div>
+</div>
+<!-- الصف الثالث -->
+<div class="row g-3 mb-4">
+<!-- رقم تصريح الحفر -->
+<div class="col-6">
+<label class="form-label" for="diggingPermit">
+                            رقم تصريح الحفر <span class="text-danger">*</span>
+</label>
+<div class="field-wrap">
+<input class="form-control" id="diggingPermit" name="diggingPermit" required="" type="text"/>
+</div>
+<div class="field-error" data-error-for="diggingPermit">هذا الحقل مطلوب</div>
+</div>
+<!-- بداية الضخ -->
+<div class="col-6">
+<label class="form-label" for="pumpingStart">
+                            بداية الضخ <span class="text-danger">*</span>
+</label>
+<div class="field-wrap field-wrap--date">
+<input autocomplete="off" class="form-control date-input" id="pumpingStart" inputmode="none" name="pumpingStart" placeholder="اختر التاريخ" required="" type="text"/>
+<span aria-hidden="true" class="date-input__icon">
+<i class="hgi hgi-stroke hgi-calendar-03"></i>
+</span>
+</div>
+<div class="field-error" data-error-for="pumpingStart">هذا الحقل مطلوب</div>
+</div>
+</div>
+<!-- الصف الرابع -->
+<div class="row g-3 mb-4">
+<!-- مدة الضخ -->
+<div class="col-6">
+<label class="form-label" for="pumpingMonths">
+                            وذلك لمدة بالأشهر <span class="text-danger">*</span>
+</label>
+<div class="field-wrap">
+<input class="form-control" id="pumpingMonths" min="1" name="pumpingMonths" required="" type="number"/>
+</div>
+<div class="field-error" data-error-for="pumpingMonths">هذا الحقل مطلوب</div>
+</div>
+<!-- الاستشاري -->
+<div class="col-6">
+<label class="form-label" for="consultant">
+                            الاستشاري <span class="text-danger">*</span>
+</label>
+<div class="field-wrap">
+<select class="form-select" id="consultant" name="consultant" required="">
+<option disabled="" selected="" value="">اختر الاستشاري</option>
+<option>شركة دار الهندسة</option>
+<option>شركة الاستشارات المتقدمة</option>
+<option>مكتب الهندسة المتحدة</option>
+<option>شركة المستقبل للاستشارات</option>
+</select>
+</div>
+<div class="field-error" data-error-for="consultant">هذا الحقل مطلوب</div>
+</div>
+</div>
+<!-- الصف الخامس -->
+<div class="row g-3 mb-4">
+<!-- المقاول -->
+<div class="col-6">
+<label class="form-label" for="contractor">
+                            المقاول <span class="text-danger">*</span>
+</label>
+<div class="field-wrap">
+<select class="form-select" id="contractor" name="contractor" required="">
+<option disabled="" selected="" value="">اختر المقاول</option>
+<option>شركة جدة للمقاولات</option>
+<option>شركة أبناء الجزيرة</option>
+<option>شركة البناء الحديث</option>
+<option>شركة الإنجاز</option>
+<option>مؤسسة المشاريع المتطورة</option>
+</select>
+</div>
+<div class="field-error" data-error-for="contractor">هذا الحقل مطلوب</div>
+</div>
+<!-- المختبر -->
+<div class="col-6">
+<label class="form-label" for="lab">
+                            المختبر <span class="text-danger">*</span>
+</label>
+<div class="field-wrap">
+<select class="form-select" id="lab" name="lab" required="">
+<option disabled="" selected="" value="">اختر المختبر</option>
+<option>مختبر الجودة</option>
+<option>مختبر التربة</option>
+<option>مختبر البناء الحديث</option>
+<option>مختبر الخليج</option>
+</select>
+</div>
+<div class="field-error" data-error-for="lab">هذا الحقل مطلوب</div>
+</div>
+</div>
+<!-- تحديد الموقع -->
+<div class="mt-5 section-block" id="section-location">
+<h3 class="section-title">تحديد الموقع</h3>
+<label class="form-label fw-bold">
+                        حدد الموقع على الخريطة <span class="text-danger">*</span>
+</label>
+<div class="map-frame">
+<iframe data-src="https://maps.google.com/maps?q=Jeddah&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" height="380" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="about:blank" style="border:0; display:block;" title="خريطة موقع المشروع" width="100%">
+</iframe>
+</div>
+</div>
+<!-- الإحداثيات -->
+<div class="row">
+<!-- الإحداثيات X -->
+<div class="col-6">
+<label class="form-label" for="coordX">
+                            الإحداثيات X <span class="text-danger">*</span>
+</label>
+<div class="field-wrap">
+<input class="form-control" id="coordX" name="coordX" required="" type="text"/>
+</div>
+<div class="field-error" data-error-for="coordX">هذا الحقل مطلوب</div>
+</div>
+<!-- الإحداثيات Y -->
+<div class="col-6">
+<label class="form-label" for="coordY">
+                            الإحداثيات Y <span class="text-danger">*</span>
+</label>
+<div class="field-wrap">
+<input class="form-control" id="coordY" name="coordY" required="" type="text"/>
+</div>
+<div class="field-error" data-error-for="coordY">هذا الحقل مطلوب</div>
+</div>
+</div>
+<!-- البلدية والحي -->
+<div class="row">
+<!-- البلدية -->
+<div class="col-6">
+<label class="form-label" for="municipality">
+                            البلدية <span class="text-danger">*</span>
+</label>
+<div class="field-wrap">
+<select class="form-select" id="municipality" name="municipality" required="">
+<option disabled="" selected="" value="">اختر البلدية</option>
+<option>بلدية أبحر</option>
+<option>بلدية البلد</option>
+<option>بلدية الجنوب</option>
+<option>بلدية الشرفية</option>
+<option>بلدية بريمان</option>
+</select>
+</div>
+<div class="field-error" data-error-for="municipality">هذا الحقل مطلوب</div>
+</div>
+<!-- الحي -->
+<div class="col-6">
+<label class="form-label" for="district">
+                            الحي <span class="text-danger">*</span>
+</label>
+<div class="field-wrap">
+<input class="form-control" id="district" name="district" required="" type="text"/>
+</div>
+<div class="field-error" data-error-for="district">هذا الحقل مطلوب</div>
+</div>
+</div>
+<!-- الشارع ورقم معاملة الضخ -->
+<div class="row">
+<!-- الشارع -->
+<div class="col-6">
+<label class="form-label" for="street">
+                            الشارع <span class="text-danger">*</span>
+</label>
+<div class="field-wrap">
+<select class="form-select" id="street" name="street" required="">
+<option disabled="" selected="" value="">اختر الشارع</option>
+<option>شارع فلسطين</option>
+<option>شارع الأمير سلطان</option>
+<option>شارع التحلية</option>
+<option>شارع حراء</option>
+<option>شارع الملك عبدالعزيز</option>
+</select>
+</div>
+<div class="field-error" data-error-for="street">هذا الحقل مطلوب</div>
+</div>
+<!-- رقم معاملة الضخ -->
+<div class="col-6">
+<label class="form-label" for="pumpingTxn">
+                            رقم معاملة الضخ <span class="text-danger">*</span>
+</label>
+<div class="field-wrap">
+<input class="form-control" id="pumpingTxn" name="pumpingTxn" required="" type="text"/>
+</div>
+<div class="field-error" data-error-for="pumpingTxn">هذا الحقل مطلوب</div>
+</div>
+</div>
+<!-- بيانات المضخة -->
+<div class="mt-5 section-block" id="section-pumps">
+<h3 class="section-title">بيانات المضخة</h3>
+<div class="row align-items-end g-3">
+<!-- نوع المضخة -->
+<div class="col-6 col-lg-3">
+<label class="form-label" for="pumpType">
+                                نوع المضخة <span class="text-danger">*</span>
+</label>
+<div class="field-wrap">
+<select class="form-select" id="pumpType">
+<option disabled="" selected="" value="">اختر</option>
+<option>مضخة غاطسة</option>
+<option>مضخة سطحية</option>
+</select>
+</div>
+<div class="field-error" data-error-for="pumpType">اختر نوع المضخة</div>
+</div>
+<!-- عدد المضخات -->
+<div class="col-6 col-lg-2">
+<label class="form-label" for="pumpCount">
+                                عدد المضخات <span class="text-danger">*</span>
+</label>
+<div class="field-wrap">
+<input class="form-control" id="pumpCount" min="1" type="number"/>
+</div>
+<div class="field-error" data-error-for="pumpCount">أدخل عدد المضخات</div>
+</div>
+<!-- عدد الشهور -->
+<div class="col-6 col-lg-2">
+<label class="form-label" for="pumpMonths">
+                                عدد الشهور <span class="text-danger">*</span>
+</label>
+<div class="field-wrap">
+<input class="form-control" id="pumpMonths" min="1" type="number" value="0"/>
+</div>
+<div class="field-error" data-error-for="pumpMonths">أدخل عدد الشهور</div>
+</div>
+<!-- عدد الأمتار المستحقة -->
+<div class="col-6 col-lg-3">
+<label class="form-label" for="pumpMeters">
+                                عدد الأمتار المستحقة <span class="text-danger">*</span>
+</label>
+<div class="field-wrap">
+<input class="form-control" id="pumpMeters" min="1" type="number"/>
+</div>
+<div class="field-error" data-error-for="pumpMeters">أدخل عدد الأمتار</div>
+</div>
+<!-- زر إضافة -->
+<div class="col-12 col-lg-2">
+<button class="btn btn-add btn--primary-neutral" id="addPumpBtn" type="button">
+<svg aria-hidden="true" class="btn-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M12 5v14M5 12h14"></path>
+</svg>
+                                إضافة
+                            </button>
+</div>
+</div>
+<!-- جدول المضخات المضافة -->
+<div class="pumps-table-wrap" hidden="" id="pumpsTableWrap">
+<table class="pumps-table" id="pumpsTable">
+<thead>
+<tr>
+<th>#</th>
+<th>نوع المضخة</th>
+<th>عدد المضخات</th>
+<th>عدد الشهور</th>
+<th>الأمتار المستحقة</th>
+<th>إجراء</th>
+</tr>
+</thead>
+<tbody id="pumpsTableBody"></tbody>
+</table>
+</div>
+<div class="field-error" data-error-for="pumpsList">يجب إضافة مضخة واحدة على الأقل</div>
+</div>
+<!-- المرفقات -->
+<div class="mt-5 section-block attachments-bulk-section" id="section-attachments"><h3 class="section-title">المرفقات المطلوبة</h3><div class="attachments-bulk-layout"><div class="attachments-bulk-upload"><div aria-controls="bulkFilesInput" class="bulk-uploader" id="bulkUploader" role="button" tabindex="0"><span aria-hidden="true" class="bulk-uploader__icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="M14 2.5H7.5A1.5 1.5 0 0 0 6 4v16a1.5 1.5 0 0 0 1.5 1.5h9A1.5 1.5 0 0 0 18 20V7.5L14 2.5z"></path><path d="M14 2.5V7.5h4"></path><path d="M12 17.2v-6"></path><path d="M9.6 13.4 12 11l2.4 2.4"></path></svg></span><p class="bulk-uploader__text">اسحب وأفلت جميع الملفات هنا للرفع</p><p class="bulk-uploader__hint">يمكنك تحديد جميع الملفات المطلوبة معًا — الحد الأقصى لكل ملف 2 ميجابايت، والصيغ المدعومة PDF, PNG, JPG.</p><span class="bulk-uploader__browse-btn">تصفح الملفات</span><input accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png" class="bulk-uploader__input" id="bulkFilesInput" multiple="True" name="bulkFilesInput" type="file"/></div><div aria-live="polite" class="bulk-upload-status" id="bulkUploadStatus"></div></div><aside class="attachments-required-list"><h4 class="attachments-required-list__title">قائمة الملفات المطلوب إرفاقها:</h4><ul><li data-required-file="fileCommercial"><span class="attachments-required-list__icon"></span><span>السجل التجاري</span></li><li data-required-file="fileBuilding"><span class="attachments-required-list__icon"></span><span>رخصة البناء</span></li><li data-required-file="fileBank"><span class="attachments-required-list__icon"></span><span>الضمان البنكي</span></li><li data-required-file="fileOwnerId"><span class="attachments-required-list__icon"></span><span>هوية المالك</span></li><li data-required-file="fileSoil"><span class="attachments-required-list__icon"></span><span>تقرير التربة</span></li><li data-required-file="fileSketch"><span class="attachments-required-list__icon"></span><span>الكروكي التنظيمي</span></li><li data-required-file="filePumpLine"><span class="attachments-required-list__icon"></span><span>ملف اعتماد خط الضخ</span></li><li data-required-file="fileAerial"><span class="attachments-required-list__icon"></span><span>التصوير الجوي</span></li></ul></aside></div><div class="attachments-legacy-fields" hidden="True"><div class="mb-4 file-field">
+<label class="form-label" for="fileCommercial">
+                            السجل التجاري (pdf) <span class="text-danger">*</span>
+</label>
+<div aria-controls="fileCommercial" class="uploader" data-formats="pdf" data-max-files="1" data-max-size="2097152" data-multiple="false" data-uploader="fileCommercial" role="button" tabindex="0">
+<input accept=".pdf,application/pdf" class="uploader__input" id="fileCommercial" name="fileCommercial" required="" type="file"/>
+<span aria-hidden="true" class="uploader__icon">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M14 2.5H7.5A1.5 1.5 0 0 0 6 4v16a1.5 1.5 0 0 0 1.5 1.5h9A1.5 1.5 0 0 0 18 20V7.5L14 2.5z"></path>
+<path d="M14 2.5V7.5h4"></path>
+<path d="M12 17.2v-6"></path>
+<path d="M9.6 13.4 12 11l2.4 2.4"></path>
+</svg>
+</span>
+<p class="uploader__text">اسحب و أفلت الملف هنا للرفع</p>
+<p class="uploader__hint">ملف واحد — الحد الأقصى لحجم الملف المسموح به هو 2 ميجابايت، والصيغة المدعومة pdf.</p>
+<span class="uploader__browse-btn">تصفح الملفات</span>
+</div>
+<div class="uploader-files" data-file-list="fileCommercial"></div>
+<div class="field-error" data-error-for="fileCommercial">أرفق ملف PDF</div>
+</div><div class="mb-4 file-field">
+<label class="form-label" for="fileBuilding">
+                            رخصة البناء (pdf) <span class="text-danger">*</span>
+</label>
+<div aria-controls="fileBuilding" class="uploader" data-formats="pdf" data-max-files="1" data-max-size="2097152" data-multiple="false" data-uploader="fileBuilding" role="button" tabindex="0">
+<input accept=".pdf,application/pdf" class="uploader__input" id="fileBuilding" name="fileBuilding" required="" type="file"/>
+<span aria-hidden="true" class="uploader__icon">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M14 2.5H7.5A1.5 1.5 0 0 0 6 4v16a1.5 1.5 0 0 0 1.5 1.5h9A1.5 1.5 0 0 0 18 20V7.5L14 2.5z"></path>
+<path d="M14 2.5V7.5h4"></path>
+<path d="M12 17.2v-6"></path>
+<path d="M9.6 13.4 12 11l2.4 2.4"></path>
+</svg>
+</span>
+<p class="uploader__text">اسحب و أفلت الملف هنا للرفع</p>
+<p class="uploader__hint">ملف واحد — الحد الأقصى لحجم الملف المسموح به هو 2 ميجابايت، والصيغة المدعومة pdf.</p>
+<span class="uploader__browse-btn">تصفح الملفات</span>
+</div>
+<div class="uploader-files" data-file-list="fileBuilding"></div>
+<div class="field-error" data-error-for="fileBuilding">أرفق ملف PDF</div>
+</div><div class="mb-4 file-field">
+<label class="form-label" for="fileBank">
+                            الضمان البنكي (pdf) <span class="text-danger">*</span>
+</label>
+<div aria-controls="fileBank" class="uploader" data-formats="pdf" data-max-files="1" data-max-size="2097152" data-multiple="false" data-uploader="fileBank" role="button" tabindex="0">
+<input accept=".pdf,application/pdf" class="uploader__input" id="fileBank" name="fileBank" required="" type="file"/>
+<span aria-hidden="true" class="uploader__icon">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M14 2.5H7.5A1.5 1.5 0 0 0 6 4v16a1.5 1.5 0 0 0 1.5 1.5h9A1.5 1.5 0 0 0 18 20V7.5L14 2.5z"></path>
+<path d="M14 2.5V7.5h4"></path>
+<path d="M12 17.2v-6"></path>
+<path d="M9.6 13.4 12 11l2.4 2.4"></path>
+</svg>
+</span>
+<p class="uploader__text">اسحب و أفلت الملف هنا للرفع</p>
+<p class="uploader__hint">ملف واحد — الحد الأقصى لحجم الملف المسموح به هو 2 ميجابايت، والصيغة المدعومة pdf.</p>
+<span class="uploader__browse-btn">تصفح الملفات</span>
+</div>
+<div class="uploader-files" data-file-list="fileBank"></div>
+<div class="field-error" data-error-for="fileBank">أرفق ملف PDF</div>
+</div><div class="mb-4 file-field">
+<label class="form-label" for="fileOwnerId">
+                            هوية المالك (pdf) <span class="text-danger">*</span>
+</label>
+<div aria-controls="fileOwnerId" class="uploader" data-formats="pdf" data-max-files="1" data-max-size="2097152" data-multiple="false" data-uploader="fileOwnerId" role="button" tabindex="0">
+<input accept=".pdf,application/pdf" class="uploader__input" id="fileOwnerId" name="fileOwnerId" required="" type="file"/>
+<span aria-hidden="true" class="uploader__icon">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M14 2.5H7.5A1.5 1.5 0 0 0 6 4v16a1.5 1.5 0 0 0 1.5 1.5h9A1.5 1.5 0 0 0 18 20V7.5L14 2.5z"></path>
+<path d="M14 2.5V7.5h4"></path>
+<path d="M12 17.2v-6"></path>
+<path d="M9.6 13.4 12 11l2.4 2.4"></path>
+</svg>
+</span>
+<p class="uploader__text">اسحب و أفلت الملف هنا للرفع</p>
+<p class="uploader__hint">ملف واحد — الحد الأقصى لحجم الملف المسموح به هو 2 ميجابايت، والصيغة المدعومة pdf.</p>
+<span class="uploader__browse-btn">تصفح الملفات</span>
+</div>
+<div class="uploader-files" data-file-list="fileOwnerId"></div>
+<div class="field-error" data-error-for="fileOwnerId">أرفق ملف PDF</div>
+</div><div class="mb-4 file-field">
+<label class="form-label" for="fileSoil">
+                            تقرير التربة (pdf) <span class="text-danger">*</span>
+</label>
+<div aria-controls="fileSoil" class="uploader" data-formats="pdf" data-max-files="1" data-max-size="2097152" data-multiple="false" data-uploader="fileSoil" role="button" tabindex="0">
+<input accept=".pdf,application/pdf" class="uploader__input" id="fileSoil" name="fileSoil" required="" type="file"/>
+<span aria-hidden="true" class="uploader__icon">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M14 2.5H7.5A1.5 1.5 0 0 0 6 4v16a1.5 1.5 0 0 0 1.5 1.5h9A1.5 1.5 0 0 0 18 20V7.5L14 2.5z"></path>
+<path d="M14 2.5V7.5h4"></path>
+<path d="M12 17.2v-6"></path>
+<path d="M9.6 13.4 12 11l2.4 2.4"></path>
+</svg>
+</span>
+<p class="uploader__text">اسحب و أفلت الملف هنا للرفع</p>
+<p class="uploader__hint">ملف واحد — الحد الأقصى لحجم الملف المسموح به هو 2 ميجابايت، والصيغة المدعومة pdf.</p>
+<span class="uploader__browse-btn">تصفح الملفات</span>
+</div>
+<div class="uploader-files" data-file-list="fileSoil"></div>
+<div class="field-error" data-error-for="fileSoil">أرفق ملف PDF</div>
+</div><div class="mb-4 file-field">
+<label class="form-label" for="fileSketch">
+                            الكروكي (pdf) <span class="text-danger">*</span>
+</label>
+<div aria-controls="fileSketch" class="uploader" data-formats="pdf" data-max-files="1" data-max-size="2097152" data-multiple="false" data-uploader="fileSketch" role="button" tabindex="0">
+<input accept=".pdf,application/pdf" class="uploader__input" id="fileSketch" name="fileSketch" required="" type="file"/>
+<span aria-hidden="true" class="uploader__icon">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M14 2.5H7.5A1.5 1.5 0 0 0 6 4v16a1.5 1.5 0 0 0 1.5 1.5h9A1.5 1.5 0 0 0 18 20V7.5L14 2.5z"></path>
+<path d="M14 2.5V7.5h4"></path>
+<path d="M12 17.2v-6"></path>
+<path d="M9.6 13.4 12 11l2.4 2.4"></path>
+</svg>
+</span>
+<p class="uploader__text">اسحب و أفلت الملف هنا للرفع</p>
+<p class="uploader__hint">ملف واحد — الحد الأقصى لحجم الملف المسموح به هو 2 ميجابايت، والصيغة المدعومة pdf.</p>
+<span class="uploader__browse-btn">تصفح الملفات</span>
+</div>
+<div class="uploader-files" data-file-list="fileSketch"></div>
+<div class="field-error" data-error-for="fileSketch">أرفق ملف PDF</div>
+</div><div class="mb-4 file-field">
+<label class="form-label" for="filePumpLine">
+                            ملف اعتماد خط الضخ (pdf) <span class="text-danger">*</span>
+</label>
+<div aria-controls="filePumpLine" class="uploader" data-formats="pdf" data-max-files="1" data-max-size="2097152" data-multiple="false" data-uploader="filePumpLine" role="button" tabindex="0">
+<input accept=".pdf,application/pdf" class="uploader__input" id="filePumpLine" name="filePumpLine" required="" type="file"/>
+<span aria-hidden="true" class="uploader__icon">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M14 2.5H7.5A1.5 1.5 0 0 0 6 4v16a1.5 1.5 0 0 0 1.5 1.5h9A1.5 1.5 0 0 0 18 20V7.5L14 2.5z"></path>
+<path d="M14 2.5V7.5h4"></path>
+<path d="M12 17.2v-6"></path>
+<path d="M9.6 13.4 12 11l2.4 2.4"></path>
+</svg>
+</span>
+<p class="uploader__text">اسحب و أفلت الملف هنا للرفع</p>
+<p class="uploader__hint">ملف واحد — الحد الأقصى لحجم الملف المسموح به هو 2 ميجابايت، والصيغة المدعومة pdf.</p>
+<span class="uploader__browse-btn">تصفح الملفات</span>
+</div>
+<div class="uploader-files" data-file-list="filePumpLine"></div>
+<div class="field-error" data-error-for="filePumpLine">أرفق ملف PDF</div>
+</div><div class="mb-4 file-field">
+<label class="form-label" for="fileAerial">
+                            التصوير الجوي (jpg / PNG / JPEG) <span class="text-danger">*</span>
+</label>
+<div aria-controls="fileAerial" class="uploader" data-formats="jpg,jpeg,png" data-max-files="10" data-max-size="2097152" data-multiple="true" data-uploader="fileAerial" role="button" tabindex="0">
+<input accept=".jpg,.jpeg,.png,image/jpeg,image/png" class="uploader__input" id="fileAerial" multiple="" name="fileAerial" required="" type="file"/>
+<span aria-hidden="true" class="uploader__icon">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M14 2.5H7.5A1.5 1.5 0 0 0 6 4v16a1.5 1.5 0 0 0 1.5 1.5h9A1.5 1.5 0 0 0 18 20V7.5L14 2.5z"></path>
+<path d="M14 2.5V7.5h4"></path>
+<path d="M12 17.2v-6"></path>
+<path d="M9.6 13.4 12 11l2.4 2.4"></path>
+</svg>
+</span>
+<p class="uploader__text">اسحب و أفلت الملفات هنا للرفع</p>
+<p class="uploader__hint">يمكن رفع عدة ملفات — الحد الأقصى لكل ملف 2 ميجابايت، والصيغ المدعومة jpg, png و jpeg.</p>
+<span class="uploader__browse-btn">تصفح الملفات</span>
+</div>
+<div class="uploader-files" data-file-list="fileAerial"></div>
+<div class="field-error" data-error-for="fileAerial">أرفق صورة jpg أو png</div>
+</div></div></div>
+<!-- تنبيه التعهد -->
+<div class="notice-warning">
+<span class="notice-icon">⚠</span>
+<span>
+                        يجب تحميل نموذج التعهد والتوقيع عليه ثم إعادة رفعه قبل إرسال الطلب.
+                    </span>
+</div>
+<!-- التعهد -->
+<div class="mb-4 file-field">
+<label class="form-label" for="filePledge">
+                            التعهد (pdf) <span class="text-danger">*</span>
+</label>
+<div aria-controls="filePledge" class="uploader" data-formats="pdf" data-max-files="1" data-max-size="2097152" data-multiple="false" data-uploader="filePledge" role="button" tabindex="0">
+<input accept=".pdf,application/pdf" class="uploader__input" id="filePledge" name="filePledge" required="" type="file"/>
+<span aria-hidden="true" class="uploader__icon">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M14 2.5H7.5A1.5 1.5 0 0 0 6 4v16a1.5 1.5 0 0 0 1.5 1.5h9A1.5 1.5 0 0 0 18 20V7.5L14 2.5z"></path>
+<path d="M14 2.5V7.5h4"></path>
+<path d="M12 17.2v-6"></path>
+<path d="M9.6 13.4 12 11l2.4 2.4"></path>
+</svg>
+</span>
+<p class="uploader__text">اسحب و أفلت الملف هنا للرفع</p>
+<p class="uploader__hint">ملف واحد — الحد الأقصى لحجم الملف المسموح به هو 2 ميجابايت، والصيغة المدعومة pdf.</p>
+<span class="uploader__browse-btn">تصفح الملفات</span>
+</div>
+<div class="uploader-files" data-file-list="filePledge"></div>
+<div class="field-error" data-error-for="filePledge">أرفق ملف التعهد</div>
+</div>
+<!-- الموافقة -->
+<div class="agree-box mb-4">
+<div class="form-check">
+<input class="form-check-input" id="agree" name="agree" required="" type="checkbox"/>
+<label class="form-check-label" for="agree">
+                            أتحمل صحة البيانات المدخلة
+                        </label>
+</div>
+<div class="field-error" data-error-for="agree">يجب الموافقة على صحة البيانات</div>
+</div>
+<hr class="my-5"/>
+<!-- أزرار الإجراءات -->
+<div class="form-actions">
+<button class="btn btn-add" id="backBtn" type="button">
+<span>عودة</span>
+<svg aria-hidden="true" class="btn-chevron" fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</button>
+</div>
+<!-- مستوى الخدمة والتقييم -->
+<section aria-labelledby="serviceLevelTitle" class="dga-rating-section" id="section-feedback">
+<div class="dga-rating-top">
+<div class="last-update-inline">
+<span class="platform-meta__label">تاريخ آخر تعديل:</span>
+<time datetime="2026-08-10">10 أغسطس 2026 م</time>
+</div>
+<div aria-label="متوسط تقييم الخدمة 3.9 من 5" class="rating-summary">
+<span class="rating-summary__text">تم تقييم هذه الخدمة بمتوسط <strong>3.9</strong></span>
+<div class="rating-interactive" id="ratingInteractive">
+<div aria-label="تقييم النجوم" class="stars dga-stars-list" data-rating="0" id="ratingStars" role="radiogroup">
+<button aria-checked="false" aria-label="نجمة واحدة" class="star-btn" data-value="1" role="radio" type="button"><span aria-hidden="true" class="star-btn__icon"><svg class="star-btn__bg" viewbox="0 0 24 24"><path d="m12 3.2 2.55 5.95 6.45.55-4.95 4.25 1.5 6.3L12 17.4 6.45 20.25l1.5-6.3L3 9.7l6.45-.55L12 3.2Z"></path></svg><span class="star-btn__fill"><svg viewbox="0 0 24 24"><path d="m12 3.2 2.55 5.95 6.45.55-4.95 4.25 1.5 6.3L12 17.4 6.45 20.25l1.5-6.3L3 9.7l6.45-.55L12 3.2Z"></path></svg></span></span></button>
+<button aria-checked="false" aria-label="نجمتان" class="star-btn" data-value="2" role="radio" type="button"><span aria-hidden="true" class="star-btn__icon"><svg class="star-btn__bg" viewbox="0 0 24 24"><path d="m12 3.2 2.55 5.95 6.45.55-4.95 4.25 1.5 6.3L12 17.4 6.45 20.25l1.5-6.3L3 9.7l6.45-.55L12 3.2Z"></path></svg><span class="star-btn__fill"><svg viewbox="0 0 24 24"><path d="m12 3.2 2.55 5.95 6.45.55-4.95 4.25 1.5 6.3L12 17.4 6.45 20.25l1.5-6.3L3 9.7l6.45-.55L12 3.2Z"></path></svg></span></span></button>
+<button aria-checked="false" aria-label="3 نجوم" class="star-btn" data-value="3" role="radio" type="button"><span aria-hidden="true" class="star-btn__icon"><svg class="star-btn__bg" viewbox="0 0 24 24"><path d="m12 3.2 2.55 5.95 6.45.55-4.95 4.25 1.5 6.3L12 17.4 6.45 20.25l1.5-6.3L3 9.7l6.45-.55L12 3.2Z"></path></svg><span class="star-btn__fill"><svg viewbox="0 0 24 24"><path d="m12 3.2 2.55 5.95 6.45.55-4.95 4.25 1.5 6.3L12 17.4 6.45 20.25l1.5-6.3L3 9.7l6.45-.55L12 3.2Z"></path></svg></span></span></button>
+<button aria-checked="false" aria-label="4 نجوم" class="star-btn" data-value="4" role="radio" type="button"><span aria-hidden="true" class="star-btn__icon"><svg class="star-btn__bg" viewbox="0 0 24 24"><path d="m12 3.2 2.55 5.95 6.45.55-4.95 4.25 1.5 6.3L12 17.4 6.45 20.25l1.5-6.3L3 9.7l6.45-.55L12 3.2Z"></path></svg><span class="star-btn__fill"><svg viewbox="0 0 24 24"><path d="m12 3.2 2.55 5.95 6.45.55-4.95 4.25 1.5 6.3L12 17.4 6.45 20.25l1.5-6.3L3 9.7l6.45-.55L12 3.2Z"></path></svg></span></span></button>
+<button aria-checked="false" aria-label="5 نجوم" class="star-btn" data-value="5" role="radio" type="button"><span aria-hidden="true" class="star-btn__icon"><svg class="star-btn__bg" viewbox="0 0 24 24"><path d="m12 3.2 2.55 5.95 6.45.55-4.95 4.25 1.5 6.3L12 17.4 6.45 20.25l1.5-6.3L3 9.7l6.45-.55L12 3.2Z"></path></svg><span class="star-btn__fill"><svg viewbox="0 0 24 24"><path d="m12 3.2 2.55 5.95 6.45.55-4.95 4.25 1.5 6.3L12 17.4 6.45 20.25l1.5-6.3L3 9.7l6.45-.55L12 3.2Z"></path></svg></span></span></button>
+</div>
+</div>
+<span class="rating-summary__count">1544 تقييم</span>
+</div>
+<button class="rate-service-btn" id="rateServiceBtn" type="button">قيّم هذه الخدمة</button>
+</div>
+<div class="rating-message" id="ratingMessage" role="status" aria-live="polite" hidden></div>
+<div class="dga-rating-bottom">
+<div class="feedback-result" id="feedbackResult">60% من المستخدمين قالوا نعم من 2843 تقييمًا</div>
+<div aria-label="مدى فائدة الصفحة" class="feedback-buttons" role="group">
+<button class="btn-feedback" data-feedback="yes" type="button">نعم</button>
+<button class="btn-feedback" data-feedback="no" type="button">لا</button>
+</div>
+<p class="page-feedback__q">هل كانت هذه الصفحة مفيدة؟</p>
+</div>
+<div class="feedback-survey" hidden="" id="feedbackSurvey">
+<div class="feedback-survey__header">
+<button aria-label="إغلاق" class="survey-action-btn survey-action-btn--outline survey-close-btn" id="surveyCloseBtn" type="button"><span aria-hidden="true" class="survey-close-icon">×</span><span>إغلاق</span></button>
+<p class="feedback-survey__title">من فضلك أخبرنا بالسبب <small>(يمكنك تحديد خيارات متعددة)</small> <span>*</span></p>
+</div>
+<div class="feedback-survey__body">
+<div class="feedback-survey__options" id="feedbackReasons"></div>
+<div class="feedback-survey__comment">
+<label for="feedbackComment">تعليق</label>
+<textarea id="feedbackComment" placeholder="تعليق" rows="7"></textarea>
+</div>
+</div>
+<div class="feedback-survey__gender">
+<span class="feedback-survey__gender-title">أنا</span>
+<label><input name="feedbackGender" type="radio" value="ذكر"/> ذكر</label>
+<label><input name="feedbackGender" type="radio" value="أنثى"/> أنثى</label>
+</div>
+<div class="feedback-survey__footer">
+<p>لمزيد من المعلومات يمكنك مراجعة <a href="javascript:void(0)">المشاركة الإلكترونية</a> و <a href="javascript:void(0)">شروط الاستخدام</a></p>
+<button class="survey-action-btn" id="surveySubmitBtn" type="button">إرسال</button>
+</div>
+</div>
+</section>
+</form>
+</div>
+</main>
+<footer class="site-footer" id="siteFooter">
+<div class="site-footer__inner">
+<div class="site-footer__grid">
+<div class="site-footer__col">
+<h3 class="site-footer__title">نظرة عامة</h3>
+<ul class="site-footer__links">
+<li><a href="javascript:void(0)">خصائص البوابة</a></li>
+<li><a href="javascript:void(0)">خريطة الموقع</a></li>
+<li><a href="javascript:void(0)">مواقع ذات صلة</a></li>
+<li><a href="javascript:void(0)">المشاركة الإلكترونية</a></li>
+</ul>
+</div>
+<div class="site-footer__col">
+<h3 class="site-footer__title">روابط مهمة</h3>
+<ul class="site-footer__links">
+<li>
+<a class="link-white" href="https://www.balady.gov.sa/ar" rel="noopener noreferrer" target="_blank">
+<span>بلدي</span>
+<i aria-hidden="true" class="link__icon hgi hgi-stroke hgi-link-square-01 text-white link-with-md-icon"></i>
+</a>
+</li>
+<li>
+<a class="link-white" href="javascript:void(0)" target="_blank">
+<span>مدينتي</span>
+<i aria-hidden="true" class="link__icon hgi hgi-stroke hgi-link-square-01 text-white link-with-md-icon"></i>
+</a>
+</li>
+<li>
+<a class="link-white" href="javascript:void(0)" target="_blank">
+<span>فرص</span>
+<i aria-hidden="true" class="link__icon hgi hgi-stroke hgi-link-square-01 text-white link-with-md-icon"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="site-footer__col">
+<h3 class="site-footer__title">الاتصال والدعم</h3>
+<ul class="site-footer__links">
+<li><a href="javascript:void(0)">اتصل بالأمانة</a></li>
+<li><a href="javascript:void(0)">البلاغات والشكاوي</a></li>
+<li><a href="javascript:void(0)">الأسئلة الشائعة</a></li>
+</ul>
+</div>
+<div class="site-footer__col">
+<h3 class="site-footer__title">تابعنا على</h3>
+<div aria-label="حسابات التواصل" class="site-footer__social">
+<a aria-label="لينكدإن" class="site-footer__social-btn" href="javascript:void(0)">
+<i aria-hidden="true" class="hgi hgi-stroke hgi-linkedin-01"></i>
+</a>
+<a aria-label="سناب شات" class="site-footer__social-btn" href="javascript:void(0)">
+<i aria-hidden="true" class="hgi hgi-stroke hgi-snapchat"></i>
+</a>
+<a aria-label="إنستغرام" class="site-footer__social-btn" href="javascript:void(0)">
+<i aria-hidden="true" class="hgi hgi-stroke hgi-instagram"></i>
+</a>
+<a aria-label="يوتيوب" class="site-footer__social-btn" href="javascript:void(0)">
+<i aria-hidden="true" class="hgi hgi-stroke hgi-youtube"></i>
+</a>
+<a aria-label="إكس" class="site-footer__social-btn" href="javascript:void(0)">
+<i aria-hidden="true" class="hgi hgi-stroke hgi-new-twitter"></i>
+</a>
+<a aria-label="فيسبوك" class="site-footer__social-btn" href="javascript:void(0)">
+<i aria-hidden="true" class="hgi hgi-stroke hgi-facebook-01"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="site-footer__bottom">
+<div class="site-footer__legal">
+<div class="site-footer__legal-links">
+<a href="javascript:void(0)">سياسة الخصوصية</a>
+<a href="javascript:void(0)">شروط الاستخدام</a>
+<a href="javascript:void(0)">اتفاقية مستوى الخدمة</a>
+</div>
+<p class="site-footer__copy">جميع حقوق الطبع والنشر محفوظة لدى أمانة محافظة جدة © 2026 م</p>
+</div>
+<div aria-label="شعارات رسمية" class="site-footer__brands">
+<img alt="رؤية المملكة 2030" class="site-footer__logo" height="62" src="assets/logos/vision-2030-white.svg" width="96"/>
+<img alt="أمانة جدة" class="site-footer__logo site-footer__logo--amanah" height="66" src="assets/logos/amanah - 2.svg" width="120"/>
+<img alt="عام الذكاء الاصطناعي" class="site-footer__logo" height="44" src="assets/logos/ai.svg" width="130"/>
+</div>
+</div>
+</div>
+</footer>
+<a aria-label="العودة لأعلى الصفحة" class="scroll-top-btn" href="#" id="scrollTopBtn">
+<i aria-hidden="true" class="hgi hgi-stroke hgi-arrow-up-double"></i>
+</a>
+<div aria-label="أدوات المساعدة" class="float-widgets">
+<button aria-label="تحدث مع المساعد الرقمي" class="float-widgets__btn" title="تحدث مع المساعد الرقمي" type="button">
+<span aria-hidden="true" class="float-widgets__icon">
+<svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 9c-.795-3.985-4.487-7-8.92-7C6.064 2 2 5.855 2 10.61c0 2.285.938 4.36 2.469 5.9.336.34.561.803.47 1.28-.15.78-.489 1.508-.986 2.114a5.95 5.95 0 0 0 3.835-.591c.412-.218.619-.326.764-.348.102-.016.235-.001.448.035" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+<path d="M11 16.262c0 2.905 2.463 5.261 5.5 5.261q.537 0 1.064-.098c.253-.047.379-.071.467-.058.088.014.213.08.463.213.706.376 1.53.509 2.323.361a2.9 2.9 0 0 1-.598-1.291c-.055-.292.081-.575.286-.782A5.12 5.12 0 0 0 22 16.262C22 13.356 19.537 11 16.5 11S11 13.356 11 16.262Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</span>
+</button>
+<button aria-label="إمكانية الوصول" class="float-widgets__btn" title="إمكانية الوصول" type="button">
+<span aria-hidden="true" class="float-widgets__icon">
+<svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 6.5C12.8284 6.5 13.5 5.82843 13.5 5C13.5 4.17157 12.8284 3.5 12 3.5C11.1716 3.5 10.5 4.17157 10.5 5C10.5 5.82843 11.1716 6.5 12 6.5Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+<path d="M18 7C16.4537 8.23719 14.336 9 12 9C9.66404 9 7.54628 8.23719 6 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+<path d="M13.5 14.5L14.5 20.5M13.5 14.5V9M13.5 14.5H10.5M9.5 20.5L10.5 14.5M10.5 14.5V9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</span>
+</button>
+</div>
+</div>
+<!-- Bootstrap JavaScript -->
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/flatpickr/flatpickr.min.js"></script>
+<script src="vendor/flatpickr/ar.js"></script>
+<!-- منطق النموذج -->
+<script src="js/script.js"></script>
+</body>
+</html>

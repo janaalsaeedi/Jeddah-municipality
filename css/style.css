@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
 * {
     box-sizing: border-box;
 }
@@ -528,7 +527,7 @@ body {
     align-items: flex-start !important;
     gap: 0;
 }
-* Header */
+/* Header */
 #header {
     min-height: 72px;
     background: #fff;
@@ -600,170 +599,19 @@ body {
 }
 
 /* Mobile */
-/* =========================
-   MOBILE HEADER
-   ========================= */
-
 @media (max-width: 1199px) {
-
-    #header {
-        min-height: 90px;
-        position: relative;
-    }
-
-    #header .navbar {
-        min-height: 90px;
-        padding: 0;
-    }
-
-    #header .container-fluid {
-        min-height: 90px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: relative;
-    }
-
-    /* =========================
-       زر الثلاث خطوط
-       ========================= */
-
     #header .navbar-toggler {
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-
-        width: 52px;
-        height: 52px;
-
-        padding: 0;
-        margin: 0;
-
-        border: 1px solid #333;
-        background: #fff;
-        border-radius: 10px;
-
-        z-index: 1100;
+        display: block;
+        border: 0;
+        background: transparent;
+        font-size: 25px;
     }
 
-    #header .navbar-toggler i {
-        font-size: 22px;
-    }
-
-
-    /* =========================
-       الشعار
-       ========================= */
-
-    #header .navbar-brand {
-        margin-right: 0;
-        margin-left: 0;
-    }
-
-    #header .navbar-brand img {
-        width: 120px;
-        height: auto;
-    }
-
-
-    /* =========================
-       القائمة عند الفتح
-       ========================= */
-
-    #header .navbar-collapse.show {
-        display: block !important;
-
-        position: absolute;
-
-        top: 90px;
-        right: 0;
-        left: 0;
-
-        width: 100%;
-
-        background: #fff;
-
-        z-index: 1050;
-
-        padding: 0;
-
-        border-top: 1px solid #ddd;
-    }
-
-
-    /* =========================
-       تسجيل الدخول + الترجمة + البحث
-       ========================= */
-
-    #header .navbar-collapse .header-links {
-        display: flex !important;
-
-        align-items: center;
-        justify-content: flex-start;
-
-        gap: 30px;
-
-        width: 100%;
-
-        padding: 20px 30px;
-
-        border-bottom: 1px solid #ddd;
-    }
-
-    #header .navbar-collapse .header-links a {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-
-        text-decoration: none;
-    }
-
-
-    /* =========================
-       قائمة الروابط
-       ========================= */
-
-    #header .navbar-collapse .navbar-nav {
-        display: flex !important;
-
-        flex-direction: column;
-
-        width: 100%;
-
-        margin: 0;
-        padding: 0;
-    }
-
-    #header .navbar-collapse .navbar-nav .nav-item {
-        width: 100%;
-
-        border-bottom: 1px solid #ddd;
-    }
-
-    #header .navbar-collapse .navbar-nav .nav-link {
-        display: flex;
-
-        align-items: center;
-        justify-content: space-between;
-
-        width: 100%;
-
-        min-height: 70px;
-
-        padding: 15px 30px;
-
-        font-size: 18px;
-    }
-
-
-    /* =========================
-       الأيقونات
-       ========================= */
-
-    #header .navbar-right {
-        display: none !important;
+    #header .navbar-collapse {
+        display: none;
     }
 }
+
 @media (min-width: 1200px) {
     #header .navbar-toggler {
         display: none;
@@ -2035,43 +1883,4 @@ flex-direction: row-reverse;
 }
 
 
-}
-html,
-body,
-button,
-input,
-textarea,
-select,
-a,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-span,
-div {
-    font-family: "IBM Plex Sans Arabic", sans-serif !important;
-}
-body {
-    background-color: #f9fafb !important;
-}
-footer {
-    background-color: #074D31 !important;
-}
-/* لون جميع الأزرار */
-button:not(.page-feedback-close),
-.btn:not(.page-feedback-close),
-input[type="button"]:not(.page-feedback-close),
-input[type="submit"]:not(.page-feedback-close) {
-    background-color: #1B8354 !important;
-    border-color: #1B8354 !important;
-    color: #FFFFFF !important;
-}
-/* الكلام داخل الأزرار */
-button *,
-.btn *,
-input[type="button"] *,
-input[type="submit"] * {
-    color: #FFFFFF !important;
 }

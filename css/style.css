@@ -2060,15 +2060,14 @@ footer {
     background-color: #074D31 !important;
 }
 /* لون جميع الأزرار */
-button,
-.btn,
-input[type="button"],
-input[type="submit"] {
+button:not(.page-feedback-close),
+.btn:not(.page-feedback-close),
+input[type="button"]:not(.page-feedback-close),
+input[type="submit"]:not(.page-feedback-close) {
     background-color: #1B8354 !important;
     border-color: #1B8354 !important;
     color: #FFFFFF !important;
 }
-
 /* الكلام داخل الأزرار */
 button *,
 .btn *,

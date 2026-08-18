@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
 * {
     box-sizing: border-box;
 }
@@ -597,18 +598,39 @@ body {
     text-decoration: none;
     white-space: nowrap;
 }
-
-/* Mobile */
 @media (max-width: 1199px) {
+
+    #header .container-fluid {
+        min-height: 72px;
+        padding: 0 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #header .navbar-brand {
+        margin: 0;
+    }
+
+    #header .navbar-brand img {
+        width: 85px;
+    }
+
     #header .navbar-toggler {
         display: block;
-        border: 0;
+        border: 1px solid #9CA3AF;
         background: transparent;
-        font-size: 25px;
+        color: #333;
+        font-size: 22px;
+        padding: 4px 8px;
+        margin: 0;
     }
 
     #header .navbar-collapse {
         display: none;
+    }
+    #header .navbar-collapse.show {
+        display: block;
     }
 }
 
